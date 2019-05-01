@@ -1,0 +1,16 @@
+FROM golang:1.12.4-alpine3.9
+RUN apk update
+RUN apk upgrade
+RUN apk add bash
+RUN apk add curl
+RUN apk add wget
+RUN apk add git
+RUN apk add vim
+RUN apk add openssh
+RUN apk add unzip
+
+RUN echo -e "imap jk <Esc>\nset number\nset hidden" > /root/.vimrc
+
+COPY bashrc-go /root/.bashrc
+
+

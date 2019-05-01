@@ -1,0 +1,19 @@
+FROM openjdk:8-jre-alpine
+RUN apk update
+RUN apk upgrade
+RUN apk add bash
+RUN apk add curl
+RUN apk add wget
+RUN apk add git
+RUN apk add vim
+RUN apk add openssh
+RUN apk add unzip
+RUN mkdir /bucket
+RUN mkdir /opt/gradle
+
+RUN curl -ivL -O https://gradle.org/next-steps/?version=5.4.1&format=bin
+#RUN unzip -d /opt/gradle /bucket/gradle.zip
+
+RUN echo -e "imap jk <Esc>\nset number\nset hidden" > /root/.vimrc
+
+COPY bashrc-java /root/.bashrc
