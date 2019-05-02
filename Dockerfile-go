@@ -9,8 +9,7 @@ RUN apk add vim
 RUN apk add openssh
 RUN apk add unzip
 
-RUN echo -e "imap jk <Esc>\nset number\nset hidden" > /root/.vimrc
-
+COPY vimrc /root/.vimrc
 COPY bashrc-go /root/.bashrc
 
 
