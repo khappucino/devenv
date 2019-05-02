@@ -8,3 +8,4 @@ PS1="\e[93m\]godev#\e[0m \e[32m\]\w \e[0m\e[95m\]\$(parse_git_branch) > \e[0m"
 export GOPATH=$HOME/source/gopath
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
+cd ~/source

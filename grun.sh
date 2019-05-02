@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -v ~/source:/root/source -it godev bash
+docker run -v ~/source:/root/source  -v ~/.ssh:/root/.ssh  -it godev bash
