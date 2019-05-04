@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build $1 -t godev -f Dockerfile-go .
+docker build $@ -t godev -f Dockerfile-go .

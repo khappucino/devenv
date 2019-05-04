@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -v ~/source:/root/source -v ~/.ssh:/root/.ssh -it javadev bash
+docker run -v ~/source:/root/source  -v ~/.ssh:/root/.ssh  -it javadev bash
