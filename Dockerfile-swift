@@ -1,0 +1,15 @@
+FROM swift:5.0.1
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get install bash -y
+RUN apt-get install curl -y
+RUN apt-get install wget -y
+RUN apt-get install git -y
+RUN apt-get install vim -y
+RUN apt-get install unzip -y
+RUN apt-get install screen -y
+
+COPY vimrc /root/.vimrc
+COPY bashrc-swift /root/.bashrc
+
+
