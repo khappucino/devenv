@@ -1,0 +1,10 @@
+#https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt
+
+parse_git_branch() {                                                                                
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'                                 
+}                                                                                                   
+PS1="\e[93m\]debiandev#\e[0m \e[32m\]\w \e[0m\e[95m\]\$(parse_git_branch) > \e[0m"    
+
+export PATH=$PATH:/root
+
+cd ~/source
