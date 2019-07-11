@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 ENV SHELL /bin/bash
 
@@ -49,6 +49,13 @@ RUN apt-get -y install docker-ce-cli
 
 RUN pip install git+https://github.com/pdex/aptly_api_cli.git@0.3
 
+RUN pip install mkdocs
+
+RUN cd /root/ && curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh && bash nodesource_setup.sh
+
+RUN apt-get install nodejs
+
+RUN apt-get install -y procps
+
 COPY vimrc /root/.vimrc
 COPY bashrc-debian /root/.bashrc
-
